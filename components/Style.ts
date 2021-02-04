@@ -6,8 +6,32 @@ const dimensions = {
 };
 
 export default StyleSheet.create({
+  contentContainer: {
+    paddingHorizontal: 2.5,
+  },
   max: {
     flex: 1,
+  },
+  inputBox: {
+    marginTop: 45,
+    paddingHorizontal: 10,
+    flex: 1,
+  },
+  inputContainer: {
+    marginVertical: 15,
+  },
+  input: {
+    paddingVertical: 10,
+    height: 80,
+    borderWidth: 1,
+    borderColor: '#3f3f3f',
+    backgroundColor: '#f9f9f9',
+    padding: 5,
+    color: '#777777',
+  },
+  btnInputs: {
+    flexGrow: 0.5,
+    justifyContent: 'center',
   },
   buttonHolder: {
     height: 100,
@@ -21,13 +45,15 @@ export default StyleSheet.create({
     paddingVertical: 10,
     backgroundColor: '#0093E9',
     borderRadius: 25,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   buttonText: {
     color: '#fff',
   },
   fullView: {
     width: dimensions.width,
-    height: dimensions.height - 100,
+    height: dimensions.height - 150,
   },
   remoteContainer: {
     width: '100%',
@@ -44,5 +70,10 @@ export default StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 5,
     color: '#0093E9',
+  },
+  roleText: {
+    textAlign: 'center',
+    fontWeight: '700',
+    fontSize: 18,
   },
 });
