@@ -7,6 +7,8 @@ import {
   View,
   SafeAreaView,
   TextInput,
+  KeyboardAvoidingView,
+  Dimensions,
 } from 'react-native';
 import RtcEngine, {
   RtcLocalView,
@@ -36,6 +38,7 @@ interface State {
   peerIds: number[];
   hideInput: boolean;
 }
+const screen = Dimensions.get('window');
 
 export default class App extends Component<null, State> {
   _engine?: RtcEngine;
@@ -202,7 +205,7 @@ export default class App extends Component<null, State> {
 
   _renderInputs = () => {
     return (
-      <View style={styles.inputBox}>
+      <ScrollView style={styles.inputBox}>
         <View style={styles.inputContainer}>
           <Text>App ID:</Text>
           <TextInput
@@ -234,6 +237,7 @@ export default class App extends Component<null, State> {
             numberOfLines={20}
             value={this.state.token}
             onChangeText={(txt) => this.setState({ token: txt })}
+            onSubmitEditing={() => console.log('object')}
           />
         </View>
         <View style={styles.btnInputs}>
@@ -244,7 +248,7 @@ export default class App extends Component<null, State> {
             <Text style={styles.buttonText}> Save </Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </ScrollView>
     );
   };
 

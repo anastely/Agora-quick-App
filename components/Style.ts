@@ -13,12 +13,13 @@ export default StyleSheet.create({
     flex: 1,
   },
   inputBox: {
-    marginTop: 45,
+    marginTop: 20,
     paddingHorizontal: 10,
     flex: 1,
+    // marginBottom: 100,
   },
   inputContainer: {
-    marginVertical: 15,
+    marginVertical: 5,
   },
   input: {
     paddingVertical: 10,
